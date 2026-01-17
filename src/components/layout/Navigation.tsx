@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useAppConfig } from '../../hooks/useAppConfig';
 import { useTheme } from '../../hooks/useTheme';
+import { ThemeToggleButton } from '../ui/ThemeToggleButton';
 
 export function Navigation() {
   const config = useAppConfig();
@@ -60,6 +61,7 @@ export function Navigation() {
               </li>
             ))}
           </ul>
+          <ThemeToggleButton/>
         </div>
       </div>
     </nav>
