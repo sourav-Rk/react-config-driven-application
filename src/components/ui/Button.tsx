@@ -33,7 +33,7 @@ export function Button({
         color:
           variant === 'outline'
             ? theme.colors.primary
-            : variant === 'secondary' && variant !== 'primary'
+            : variant === 'secondary'
             ? theme.colors.text
             : theme.colors.background,
         boxShadow:

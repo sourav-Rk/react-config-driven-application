@@ -48,7 +48,7 @@ export function FaqAccordion({ items, className = '' }: FaqAccordionProps) {
             >
               <span className="font-semibold pr-4">{item.question}</span>
               <span
-                className="text-xl transition-transform duration-300 flex-shrink-0"
+                className="text-xl transition-transform duration-300 flex-0"
                 style={{
                   color: theme.colors.primary,
                   transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',

@@ -64,7 +64,7 @@ export function CtaCard({
             color:
               buttonVariant === 'outline'
                 ? theme.colors.primary
-                : buttonVariant === 'secondary' && buttonVariant !== 'primary'
+                : buttonVariant === 'secondary'
                 ? theme.colors.text
                 : theme.colors.background,
             boxShadow:

@@ -47,7 +47,7 @@ export function ActivityTimeline({
         >
           {/* Icon Circle */}
           <div
-            className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10"
+            className="flex-0 w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10"
             style={{
               backgroundColor: theme.colors.surface,
               borderColor: theme.colors.secondary,

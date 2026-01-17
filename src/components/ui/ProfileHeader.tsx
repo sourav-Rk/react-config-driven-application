@@ -1,15 +1,15 @@
-import type { ProfileHeaderConfig } from '../../config/types';
-import { useTheme } from '../../hooks/useTheme';
-import { useUserProfile } from '../../hooks/useUserProfile';
+import type { ProfileHeaderConfig } from "../../config/types";
+import { useTheme } from "../../hooks/useTheme";
+import { useUserProfile } from "../../hooks/useUserProfile";
 
-interface ProfileHeaderProps extends Omit<ProfileHeaderConfig, 'type'> {
+interface ProfileHeaderProps extends Omit<ProfileHeaderConfig, "type"> {
   className?: string;
 }
 
 export function ProfileHeader({
   showEditButton = true,
   badge,
-  className = '',
+  className = "",
 }: ProfileHeaderProps) {
   const { theme } = useTheme();
   const { user } = useUserProfile();
@@ -24,7 +24,7 @@ export function ProfileHeader({
       style={{
         backgroundColor: theme.colors.surface,
         borderColor: theme.colors.border,
-        borderWidth: '1px',
+        borderWidth: "1px",
         borderRadius: theme.borderRadius.lg,
         boxShadow: `0 4px 6px rgba(0,0,0,0.3), 0 0 20px ${theme.colors.primary}10`,
       }}
@@ -32,7 +32,7 @@ export function ProfileHeader({
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         {/* Avatar */}
         <div
-          className="w-24 h-24 rounded-full flex items-center justify-center text-3xl font-bold flex-shrink-0"
+          className="w-24 h-24 rounded-full shrink-0 flex items-center justify-center text-3xl font-bold"
           style={{
             backgroundColor: theme.colors.primary,
             color: theme.colors.background,
@@ -92,11 +92,11 @@ export function ProfileHeader({
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = `0 0 25px ${theme.colors.primary}60`;
-              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.transform = "scale(1.05)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = `0 0 15px ${theme.colors.primary}40`;
-              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.transform = "scale(1)";
             }}
           >
             Edit Profile
@@ -106,4 +106,3 @@ export function ProfileHeader({
     </div>
   );
 }
-
