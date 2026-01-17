@@ -42,7 +42,10 @@ export interface NavigationItem {
 }
 
 export interface AppConfig {
-  theme: ThemeConfig;
+  theme: {
+    current: "dark" | "light";
+    themes: Record<"dark" | "light", ThemeConfig>;
+  };
   pages: Record<string, PageConfig>;
   navigation: {
     items: NavigationItem[];
