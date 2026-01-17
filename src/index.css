@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* Set dark background for body to match theme */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background, #050A12); /* Use theme CSS variable with fallback */
+}
+
+html {
+  background-color: var(--color-background, #050A12); /* Use theme CSS variable with fallback */
+}
+
+/* Moving rails animation for buttons */
+@keyframes railMoveTop {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes railMoveRight {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes railMoveBottom {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes railMoveLeft {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.moving-rails-button {
+  position: relative;
+}
+
+.moving-rails-button .moving-rail-top {
+  animation: railMoveTop 3s linear infinite;
+  box-shadow: 0 0 8px var(--primary-color), 0 0 16px var(--primary-color);
+}
+
+.moving-rails-button .moving-rail-right {
+  animation: railMoveRight 3s linear infinite 0.75s;
+  box-shadow: 0 0 8px var(--primary-color), 0 0 16px var(--primary-color);
+}
+
+.moving-rails-button .moving-rail-bottom {
+  animation: railMoveBottom 3s linear infinite 1.5s;
+  box-shadow: 0 0 8px var(--primary-color), 0 0 16px var(--primary-color);
+}
+
+.moving-rails-button .moving-rail-left {
+  animation: railMoveLeft 3s linear infinite 2.25s;
+  box-shadow: 0 0 8px var(--primary-color), 0 0 16px var(--primary-color);
+}
+
+/* Shimmer animation for progress bar */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Pulse animation for promo banner */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
