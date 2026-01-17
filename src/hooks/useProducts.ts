@@ -14,11 +14,9 @@ export function useProducts(): UseProductsReturn {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Simulate API call with delay
     const fetchProducts = async (): Promise<void> => {
       try {
         setLoading(true);
-        // Simulate network delay
         await new Promise((resolve) => setTimeout(resolve, 500));
         setProducts(mockProducts);
         setError(null);

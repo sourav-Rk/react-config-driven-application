@@ -6,7 +6,7 @@ import { useTheme } from './hooks/useTheme';
 
 function App() {
   const config = useAppConfig();
-  useTheme(); // Initialize theme
+  useTheme(); 
 
   return (
     <Router>

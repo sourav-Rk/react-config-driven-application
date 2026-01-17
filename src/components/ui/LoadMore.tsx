@@ -10,7 +10,6 @@ interface LoadMoreProps extends Omit<LoadMoreConfig, 'type'> {
 
 export function LoadMore({
   buttonText = 'Load More',
-  itemsPerLoad = 6,
   className = '',
   onLoadMore,
   hasMore = true,

@@ -80,7 +80,7 @@ export function Hero({
                     color:
                       button.variant === 'outline'
                         ? theme.colors.primary
-                        : button.variant === 'secondary' && button.variant !== 'primary'
+                        : button.variant === 'secondary'
                         ? theme.colors.text
                         : theme.colors.background,
                     boxShadow:

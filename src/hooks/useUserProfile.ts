@@ -17,7 +17,6 @@ export function useUserProfile(): UseUserProfileReturn {
     const fetchUser = async (): Promise<void> => {
       try {
         setLoading(true);
-        // Simulate network delay
         await new Promise((resolve) => setTimeout(resolve, 300));
         setUser(mockUser);
         setError(null);
